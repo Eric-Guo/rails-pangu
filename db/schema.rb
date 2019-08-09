@@ -32,6 +32,14 @@ ActiveRecord::Schema.define(version: 2019_12_05_110858) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "todos", force: :cascade do |t|
+    t.string "title"
+    t.boolean "done"
+    t.uuid "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false

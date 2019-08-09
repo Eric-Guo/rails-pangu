@@ -24,4 +24,6 @@ class User < ApplicationRecord
   # def on_jwt_dispatch(token, payload)
   #     # $redis.setex("user_blacklist:#{self.id}:#{jti}", expiration, jti)
   # end
+
+  has_many :todos
 end

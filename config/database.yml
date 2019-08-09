@@ -6,14 +6,13 @@
 #
 default: &default
   adapter: postgresql
-  host: localhost
-  username: postgres
+  username: guochunzhong
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
 development:
   <<: *default
-  database: rails_pangu_development
+  database: react_redux_loginform_dev
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -24,4 +23,4 @@ test:
 
 production:
   <<: *default
-  database: rails_pangu_production
+  database: react_redux_loginform_dev

@@ -22,4 +22,10 @@ Rails.application.routes.draw do
   end
 
   extend QiniuRoutes if defined?(QiniuRoutes)
+
+  namespace :api do
+    namespace :v1 do
+      resources :todos, except: [:show]
+    end
+  end
 end
